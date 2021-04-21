@@ -1,0 +1,17 @@
+{
+    "name": "amahe/php-mini-framework-core",
+    "type": "library",
+    "description": "Core of php mini framework",
+    "authors": [
+        {
+            "name": "Abdullah Hejazi",
+            "email": "a.m.a.hejazi@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Framework\\": "src/"
+        }
+    }
+}
