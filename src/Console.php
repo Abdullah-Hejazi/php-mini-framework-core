@@ -53,7 +53,7 @@
             $boiler = $this->getObject($object, $this->boilerPlates);
             if(is_array($boiler) && !empty($boiler)) {
                 $dest = INITIAL_DIR . '/'.$boiler[1].'/'.$value.'.php';
-                $data = file_get_contents('vendor/Framework/BoilerPlates/'.$boiler[0].'.php');
+                $data = file_get_contents('BoilerPlates/'.$boiler[0].'.php');
 
                 $data = str_replace('CodeBoilerPlatePlaceHolder', $value, $data);
 
