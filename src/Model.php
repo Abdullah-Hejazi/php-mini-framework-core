@@ -70,7 +70,23 @@
 
             $result = $stmt->fetchAll(\PDO::FETCH_ASSOC);
             if(!$result) {
-                return false;
+                return [];
+            }
+            return $result;
+        }
+
+        public static function Raw($query, $data=[]) {
+            $class = get_called_class();
+            $model = new $class();
+
+            $db = \Framework\DB::getInstance();
+
+            $stmt = $db->prepare($query);
+            $stmt->execute($data);
+
+            $result = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+            if(!$result) {
+                return [];
             }
             return $result;
         }
